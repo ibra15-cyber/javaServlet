@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Enter Payment Information</title>
+	<link rel="icon" type="icon" href="C:\Users\dell\Desktop\Capture.PNG"/>
+	<link rel="stylesheet" type="text/css" href="css\s">
+	<meta name="viewport" content="width=device-width, initial-scale =1, maximum-scale=1">
+
+	<style>
+		*{
+			margin:0%;
+			padding: 0%;
+		}
+
+		html{
+			font-family: sans-serif;
+			margin:1%;
+			height:100vh;
+		}
+		header{
+			background-color: rgb(255 180 20) ;
+	
+			padding: 1%;
+		}
+
+		form{
+			padding-right: 5%;
+			background: rgb(245 245 245);
+			padding-left: .5%;
+			padding-top: .5%;
+			padding-bottom: .8%
+		}
+
+
+		input[type=text]{
+			width:40%;
+			padding: 2px ;
+			margin-bottom:5px;
+		}
+		input[type=date]{
+			width:40%;
+
+		}
+		#final{
+			clear: both;
+		}
+
+		fieldset{
+			margin-left: 3%;
+			padding-left:5%;
+			padding-right:5%;
+			padding-bottom:2%;
+		}
+
+		form{
+			padding-left: .5%;
+			padding-top: .5%;
+			padding-bottom: .5%
+		}
+
+		legend{
+			padding:2%;
+			padding-top: 2.5%;
+		}
+
+		select{
+			border-radius: 5px 5px 5px 5px;
+			background-color: rgb(245 245 245);
+			width:75%;
+			font-size: inherit;
+
+		}
+
+
+		#expiry{
+			width: 35%;
+		}
+		input[type=image]{
+			width:40px;
+			height:30px;
+		}
+
+		@media screen and (min-width: 720px){
+			
+			.onethird{
+				width:33%;
+				display:inline-block;
+				float: left;
+			}
+			.newf {
+				display: block;
+				width: 49%;
+				float: left;
+			
+			} 
+			.half{
+				clear: both;
+				width: 45%;
+				display:inline-block;
+				margin-right:2%;
+				padding:2px;	
+			}
+
+
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<header> <b>Enter Payment Information.... </b></header>
+
+	<form name="schoolForm"
+			method="post"
+			action="http://localhost:8787/TheComplRefServlet/SchoolForm">  
+		
+		<div>
+			<input type="radio" name="card option">
+				<label for="card option"><b>Credit Card</b></label>
+				<input type="image" name="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png ">
+				<input type="image" name=""	src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg ">
+				<input type="image" name=""	src="https://1000logos.net/wp-content/uploads/2016/10/Barclays-logo.png">
+				<input type="image" name="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Citi.svg/1920px-Citi.svg.png">
+				<input type="image" name=""	src="https://1000logos.net/wp-content/uploads/2020/11/Discover-Logo.jpg">
+				<input type="image" name=""	src=" https://1000logos.net/wp-content/uploads/2018/01/Wells-Fargo-logo-1-1536x1024.jpg">
+				<input type="image" name="" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg"><br><br>
+
+
+				<input type="radio" name="card option">
+				<label for="paypal checkbox"><b>PayPal</b></label>
+				<input type="image" name="paypal" src="https://1000logos-net.cdn.ampproject.org/i/s/1000logos.net/wp-content/uploads/2021/04/Paypal-logo-1536x864.png">
+				<a href="https://">  More Info </a>
+
+		</div>
+
+		<fieldset>
+			<legend><b>Card Holder Information</b></legend>
+			
+				<div class="onethird">
+					<label for="creditCard"><b>Credit Card:</b></label></br>
+					<select name="creditCard">
+						<optgroup label="American CreditCards">
+							<option value="">Visa</option>
+							<option>Citibank</option>
+							<option >Master Car</option>
+							<option>Walls Fago</option>
+							<option>USBank</option>
+							<option>SAA</option>
+							<optio>Capital One</option>
+						</optgroup>
+
+						<optgroup label="European Credit Cards">
+							<option>Barclays</option>
+							<option>Sberbank</option>
+							<option>Lloyds</option>
+						</optgroup>
+					</select><br>
+				</div>
+				
+				
+
+				<div class="onethird">
+		
+					<label for= "creditCard"><b>Number:</b> </label><br>
+					<input type="text" name="paypal" placeholder="xxxx xxxx xxxx xxxx" value=""><br>
+				</div>
+				
+				<div class="onethird"> 
+					<label for="expiration" name="expiring date" value=><b>Expiration Date:</b></label><br>
+					<select id="expiry">
+						<option></option>
+						<option>January</option>
+						<option>February</option>
+						<option>March</option>
+						<option>April</option>
+						<option>May</option>
+						<option>June</option>
+						<option>July</option>
+						<option>August</option>
+						<option>September</option>
+						<option>October</option>
+						<option>November</option>
+						<option>December</option>
+					</select>
+
+					<select id="expiry">
+						<option></option>
+						<option>2021</option>
+						<option>2022</option>
+						<option>2023</option>
+						<option>2024</option>
+						<option>2025</option>
+					</select>
+			</div> 
+
+
+		 
+				<div class="half"><br> 
+					<label for="fName"><b>First Name:</b></label><br>
+					<input type="text" name="fName"><br>
+				</div>
+
+				<div class="half">
+									
+					<label for="Name"><b>Last Name:</b></label><br>
+					<input type="text" name="LastName"><br>
+				</div>
+
+				<div class="full"><br> 
+					<label for=""><b>Address:</b></label><br>
+					<input type="text" name="Address"> <br> 
+
+					<input type="text" name="Address">
+				</div>
+
+				<div class="full"><br>
+		
+					<label for="city"><b>City:</b></label><br>
+					<input type="text" name="city">
+				</div>
+			
+			
+					<div class="newf"><br>
+						<fieldset >
+		
+							<legend><b>If within the U.S</b></legend> 
+
+							<label for="state"><b>State:</b></label><br>
+							<select>
+								<option>California</option>
+								<option>Texas</option>
+								<option>Florida</option>
+								<option>Alaska</option>
+								<option>Hawaii</option>
+								<option>Georgia</option>
+								<option>Washington</option>
+								<option>Pensylvania</option>
+								<option>Virginia</option>
+								<option>Arizona</option>
+								<option>Inidana</option> 
+							</select><br>
+
+							<label><b>Zip Code:</b></label><br>
+							<input type="text" name="zipcode" placeholder="0"> - 
+							<input type="text" name="zipcode" placeholder="0000">
+
+						</fieldset>
+					</div>
+
+					<div class="newf"><br>   
+						<fieldset >
+							<legend><b>If outside the U.S</b></legend>
+
+							<label for="state"><b>State/Provence/Region:</b></label><br>
+							<input type="text" name="state/pro"><br>
+
+					   	    <label><b>Postal Code:</b></label><br>
+							<input type="text" name="zipcode">
+						</fieldset>
+					</div>
+
+    <div id="final"><br>
+			<label for="country"><b>Country:</b></label><br>
+		<select>
+			<option>UNITED STATES OF AMERICA - (US)</option> 
+			<option>GHANA</option>
+			<option>NIGERIA</option>
+			<option>CAMEROON</option>
+			<option>SENEGAL</option>
+			<option>TOGO</option>
+		</select><br><br>
+
+		<label for="addrtype"><b>Address:</b></label><br>
+		<input type="radio" name="addrtype">Home
+		<input type="radio" name="addrtype">Business
+		<input type="radio" name="addrtype">Other
+	</div>
+
+	</fieldset>
+
+	<input type=submit value="Submit">
+
+
+	</form>
+
+</body>
+</html> 
